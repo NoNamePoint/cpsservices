@@ -1,0 +1,143 @@
+
+// ===HEADER===
+
+@media (min-width: 1120px){
+    .header{
+        display: none;
+    }   
+}
+// ===HEADER===
+
+
+// ===SECTION===
+@media (min-width: 1120px){
+    .section-wrapper__title{
+        .common-button,
+        .section-wrapper__text{
+            display: flex;
+        }
+    }
+
+    .navigation{
+        &-wrapper{
+            flex-wrap: wrap;
+        }
+    }
+
+    .article{
+        max-width: 490px;
+        & > span{
+            max-height: 160px;
+        }
+    }
+
+    .picture{
+        width: 531px;
+        height: 380px;
+        &__img{
+            object-fit: cover;
+        }
+    }
+}
+
+// ===SECTION===
+
+// ===ASIDE===
+@media (min-width: 1120px){
+    .aside{
+        // width: 320px;
+        // height: 300px;
+        // top: 88px;
+        // background-color: #fff;
+        // z-index: 1000;
+        display: none;  
+
+        &-wrapper{
+            width: 100%;
+            height: 100%;
+            padding-left: 24px;
+            padding-bottom: 24px;
+        
+            .nav__menu{
+                padding-top: 4px;
+                font-size: 16px;
+                line-height: 24px;
+
+                li{
+                    margin-bottom: 24px;
+
+                    &:last-of-type{
+                        margin-bottom: 32px;
+                    }
+
+
+                    a:hover{
+                                color: #7E7E82;
+                    }
+
+                    &:first-of-type{
+                        position: relative;
+                        
+                        a{
+                            color: #7E7E82;   
+                        }
+
+                        &::before{
+
+                            content: "";
+                            position: absolute;
+                            top: -5px;
+                            left: -24px;
+                            width: 4px;
+                            height: 32px;
+                            background: #41F6D7;
+                            border-top-right-radius: 5px;
+                            border-bottom-right-radius: 5px;
+                        }    
+                    }       
+                }
+            }
+
+            .nav__socials{
+                width: 196px;
+                height: 124px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                
+
+                .socials__buttons-link:last-of-type{
+                    margin-right: 44px;
+                }
+
+                .socials__footer-tel{
+                    font-size: 24px;
+                    line-height: 32px;
+                    font-weight: 600;
+                    letter-spacing: -0.6px;
+                }
+                
+            }
+            .nav__languages{
+                margin-top: 8px;
+                display: flex;
+                justify-content: space-between;
+                .languages__item-link:hover{
+                    color: #7E7E82;
+                }
+
+                .languages__item-link:first-of-type{
+                    color:#7E7E82;
+                }
+
+                .languages__item-link:last-of-type{
+                    margin-right: 209px;
+                }
+            }
+        }
+      
+    }  
+}
+
+// ===ASIDE===

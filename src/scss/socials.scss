@@ -1,0 +1,40 @@
+.socials{
+    display: none;
+    align-items: center;
+    margin-right: 42px;
+    position: relative;
+
+    
+    &--line {
+
+        &::after {
+            content: "";
+            margin-left: 17px;
+            width: 2px;
+            height: 32px;
+            background-color: #EAEAEA;
+            position: absolute;
+            top: 5px;
+            left: 100%;
+
+        }
+
+    }
+    
+    
+    
+
+    &__btn + &__btn{
+        margin-left: 16px;
+    }
+        
+}
+
+@media screen and (min-width: 768px){
+    .socials{
+        display: flex;
+        
+    }
+        
+}
+

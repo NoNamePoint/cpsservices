@@ -1,0 +1,21 @@
+.languages {
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 500;
+
+    &__item:not(:last-of-type) {
+        margin-right: 7px;
+
+    }
+
+    &__item--active {
+        color: $linkcolor;
+    }
+
+}
+
+@media screen and (min-width: 768px){
+    .languages{
+        margin-top: 40px;
+    }
+}

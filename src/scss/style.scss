@@ -1,0 +1,59 @@
+
+@import "base";
+@import "vars";
+@import "fonts";
+@import "header";
+@import "functional-btns";
+@import "main";
+@import "menu";
+@import "socials";
+@import "modals";
+@import "title";
+@import "navigation";
+@import "about-company";
+@import "contacts";
+@import "languages";
+
+// @import "media-768";
+// @import "media-1120";
+
+
+
+
+//=== COMMON ===
+body{
+    font-family: "TT Lakes", sans-serif;
+    background-color: $bgcolor;
+}
+
+.common-button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $accent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover{
+        cursor: pointer;
+        }
+}
+
+//=== COMMON ===
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

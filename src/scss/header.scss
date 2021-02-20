@@ -1,0 +1,149 @@
+
+
+//=== HEADER ===
+
+
+.header {
+    background-color: #fff;
+    border-bottom: 1px solid $linecolor;     
+    
+    &__inner{
+        min-height: 88px;    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    
+    &__box{
+        display: flex;
+        align-items: center;
+    }
+    
+ 
+}    
+@media screen and (min-width: 768px){
+
+
+}
+
+@media screen and (min-width: 1120px){
+    .header{
+        display: none;
+    }   
+}
+
+
+
+//     &--active{
+//         max-width: 320px;
+        
+//     }
+//         &__wrapper-logo{
+//             margin-left: 16.73px;
+//             display: flex;
+//             justify-content: center;
+//             position: relative;
+
+//             &::after{
+//             
+//             }
+//         }
+        
+//     &__buttons{
+//         flex:0 0 33%;
+//         margin-left: auto;
+
+//         a:first-child,
+//         a:nth-child(2),
+//         a:nth-child(3),
+//         a:nth-child(4){
+//             display: none;
+//         }
+
+//         a:last-child{
+//             margin-left: 16px;
+//         }    
+//     }
+
+//     &__buttons{
+//         display: flex;
+//         justify-content: flex-end;
+//         align-items: center;
+//         &-text{
+//         display: none;
+//         font-weight: medium;  
+//         }
+//     }
+
+//     &__wrapper-input{
+//         -webkit-appearance: none;
+//         -moz-appearance: none;
+//         position: absolute;
+//     }      
+// }
+
+// label.header__wrapper-button {
+//     position: relative;
+
+//     & > span{
+//     width: 18px;
+//     height: 2px;
+//     background-color: #fff;
+//     border-radius: 1px;
+//     position: absolute;
+//     top: 12px;
+//     left:10px;
+    
+//     &:nth-child(2),
+//     &:nth-child(3){
+//         width: 10px;
+//         margin-top: 6px;
+//         }
+
+//     &:last-child{
+//         width: 14px;
+//         margin-top: 12px;    
+//         }
+//     }
+// }
+
+
+// // Стилизация поведения меню при нажатии на бургер
+// .header__wrapper-input:checked{
+
+//     &~.header__wrapper-button span{
+//         &:first-child,
+//         &:last-child{
+//             display: none;
+//         }
+
+//         &:nth-child(2),
+//         &:nth-child(3){
+//             width: 18px;
+//             transition: 0.2s;        
+//         }
+
+//         &:nth-child(2){
+//             transform: rotate(45deg);        
+//         }
+
+//         &:nth-child(3){
+//             transform: rotate(-45deg);        
+//         }        
+//     }
+
+//     &~.header__buttons a{
+
+//         &:first-child{
+//             display: flex;      
+//         }
+
+//         &:not(:first-child){
+//             display: none;
+//         }
+
+//     }
+// }    
+//=== HEADER ===

@@ -1,0 +1,47 @@
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    padding: 0 16px;
+    position: relative;
+
+    
+    & > .modals {
+        display: none;
+    }
+
+    h1 {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 40px;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 4px;
+        height: 40px;
+        background: #41F6D7;
+        top: 0;
+        left: 0;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+    }       
+
+}
+
+
+@media screen and (min-width: 1120px) {
+
+    .title{
+
+        & > .modals {
+            display: flex;
+
+       
+        }
+
+        
+    }
+}
