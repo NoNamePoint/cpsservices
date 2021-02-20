@@ -192,10 +192,6 @@ button {
   .menu__media {
     margin-top: 279px; } }
 
-@media screen and (min-width: 1120px) {
-  .menu__media {
-    margin-top: auto; } }
-
 .socials {
   display: none;
   align-items: center;
