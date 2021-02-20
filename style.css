@@ -30,10 +30,13 @@ button {
   border: none; }
 
 .page {
+  min-width: 320px;
   max-width: 1120px;
   margin: 0 auto;
   font-family: "TT Lakes", sans-serif;
-  overflow: auto; }
+  overflow: auto;
+  background-color: #F8F8F8;
+  padding-bottom: 60px; }
 
 .container {
   max-width: 1120px;
@@ -139,6 +142,10 @@ button {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column; }
+
+@media screen and (min-width: 1120px) {
+  .main .services__inner {
+    padding-top: 42px; } }
 
 .menu {
   min-width: 320px;
@@ -393,7 +400,7 @@ button {
 
 body {
   font-family: "TT Lakes", sans-serif;
-  background-color: #F8F8F8; }
+  background-color: #F2F2F2; }
 
 .common-button {
   width: 40px;
