@@ -36,12 +36,13 @@ button{
 
 
 .page{
-
+  min-width: 320px;
   max-width: 1120px;
   margin: 0 auto;
   font-family: "TT Lakes", sans-serif;
   overflow: auto;
-
+  background-color: #F8F8F8;
+  padding-bottom: 60px;
 
 
 }

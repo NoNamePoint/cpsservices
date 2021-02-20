@@ -13,11 +13,23 @@
             flex-direction: column;
         }
 
-
-
     }
 }
 
+
+@media screen and (min-width: 1120px) {
+    .main {
+
+        .services{
+
+            &__inner{
+                padding-top: 42px;
+            }
+
+        }
+    }
+
+}
 
 
 //=== SECTION ===
