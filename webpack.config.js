@@ -87,6 +87,17 @@ module.exports = {
       }
     }),
 
+    new HtmlWebpackPlugin({
+      title: 'Webpack 4 Starter',
+      template: './src/swiper.html',
+      filename: "swiper.html",
+      inject: true,
+      minify: {
+        removeComments: true,
+        collapseWhitespace: false,
+      }
+    }),
+
     // Кладем стили в отдельный файлик
     new MiniCssExtractPlugin({
       filename: 'style.css',

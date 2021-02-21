@@ -17,17 +17,35 @@
         line-height: 40px;
     }
 
-    &::before {
-        content: "";
-        position: absolute;
-        width: 4px;
-        height: 40px;
-        background: #41F6D7;
-        top: 0;
-        left: 0;
-        border-bottom-right-radius: 5px;
-        border-top-right-radius: 5px;
-    }       
+    &--line{
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 4px;
+            height: 40px;
+            background: #41F6D7;
+            top: 0;
+            left: 0;
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+    }
+    
+    &--secondary{
+        padding: 16px;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        color: $linkcolor;
+        text-transform: uppercase;
+        background: linear-gradient(500deg, #F8F8F8 0%, #FFFFFF 95.61%);
+        margin-bottom: 16px;
+
+    }
+
+
 
 }
 
