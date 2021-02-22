@@ -276,6 +276,7 @@ button {
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
+    width: 100%;
     color: #7E7E82;
     text-transform: uppercase;
     background: linear-gradient(500deg, #F8F8F8 0%, #FFFFFF 95.61%);
@@ -413,10 +414,11 @@ button {
   .languages {
     margin-top: 40px; } }
 
-.gallery {
+.brands {
   height: 110px;
-  padding: 0 16px; }
-  .gallery::before {
+  padding: 0 16px;
+  width: 100%; }
+  .brands::before {
     content: "";
     width: 24px;
     height: 65px;
@@ -426,12 +428,15 @@ button {
     right: 0;
     z-index: 10; }
 
-.gallery__item {
+.brands__button {
+  display: none; }
+
+.brands__item {
   position: relative;
   max-width: 240px;
   max-height: 72px; }
 
-.gallery__link {
+.brands__link {
   display: flex;
   position: relative;
   justify-content: space-between;
