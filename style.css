@@ -413,12 +413,6 @@ button {
   .languages {
     margin-top: 40px; } }
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh; }
-
 .gallery {
   height: 110px;
   padding: 0 16px; }
