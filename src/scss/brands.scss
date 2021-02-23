@@ -2,7 +2,8 @@
 
 
 .brands{
-    height: 110px;
+    min-height: 110px;
+    max-height: 160px;
     padding: 0 16px;
     width: 100%;
     
@@ -54,3 +55,52 @@
 }
 
 
+@media screen and (min-width: 767px) {
+    .brands {
+        padding: 0 24px;
+
+        &::before {
+            display: none;
+        }
+
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px 24px;
+        }
+
+        &__item {
+            max-width: 224px;
+            max-height: 72px;    
+        }
+
+        &__button {
+            display: block;
+            padding: 10px 32px;
+
+            &--less{
+                padding: 46px 32px;
+            }
+        }
+
+    }
+
+}
+
+
+@media screen and (min-width: 1120px) {
+    .brands {
+        padding: 0 32px;
+
+        &__item {
+            max-width: 240px;
+            max-height: 72px;    
+        }
+
+        &__list {
+            gap: 16px 32px;
+        }
+
+    }
+
+}

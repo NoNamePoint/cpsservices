@@ -1,16 +1,57 @@
 import '../scss/style.scss';
 
 
-let burgerButton = document.querySelector('.header__wrapper-button');
-let nav = document.querySelector('.aside');
-let section = document.querySelector(".section")
-let header = document.querySelector(".header")  
 
-function toggleMenu() {
-    nav.classList.toggle('aside--active');
-    section.classList.toggle('section--blured');
-    header.classList.toggle('header--active');
+if (window.innerWidth <= 767) {
+    let swiper = new Swiper('.swiper-container', {
+        slidesPerView: "auto",
+        spaceBetween: 16,
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    });
 };
 
-    
-burgerButton.addEventListener('click', toggleMenu);
+
+
+let contentBrands = document.querySelector('.brands');
+let buttonBrands = document.querySelector('.brands__button');
+let showMoreButtonLink = document.querySelector('.showmore-button__link');
+
+
+
+function showMoreLess() { 
+    let maxheight = getElementStyle("max-height", contentBrands)
+
+    if (maxheight != "none") {
+        contentBrands.style.maxHeight = "none";
+        showMoreButtonLink.innerHTML = "Скрыть";
+        
+    } else {
+        contentBrands.style.maxHeight = "160px";
+        showMoreButtonLink.innerHTML = "Показать все";
+    };
+
+    brandsButtonToggleClass();
+      
+};
+
+function getElementStyle(style, element){
+    let elementStyle = window.getComputedStyle(element);
+    return elementStyle.getPropertyValue(style)
+};
+
+function brandsButtonToggleClass(){
+    showMoreButtonLink.classList.toggle("showmore-button__link--showless");
+    buttonBrands.classList.toggle("brands__button--less");
+};
+
+
+buttonBrands.addEventListener('click', showMoreLess);
+
+
+
+
+
+
+ 

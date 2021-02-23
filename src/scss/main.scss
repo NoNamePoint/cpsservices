@@ -13,6 +13,10 @@
             flex-direction: column;
         }
 
+        &__inner--secondary {
+            padding: 0;
+        }
+
     }
 }
 
@@ -24,6 +28,10 @@
 
             &__inner{
                 padding-top: 42px;
+            }
+
+            &__inner--secondary {
+            padding: 0;
             }
 
         }
