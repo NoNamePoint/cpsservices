@@ -25,6 +25,8 @@
         max-width: 240px;
         max-height: 72px;
 
+        
+
     }
 
     &__link {
@@ -38,6 +40,10 @@
         background: #fff;
         cursor: pointer;
         border-radius: 6px; 
+
+        &:hover {
+            background: linear-gradient(to bottom right, #CCFBFF, #EF96C5);
+        }
     }
 
     &__btn {
@@ -46,6 +52,7 @@
         height: 36px !important;
         background-color: transparent !important;
         border: 2px solid $accent;
+
 
     }
 

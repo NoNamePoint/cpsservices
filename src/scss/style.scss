@@ -35,11 +35,20 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    
 
     &:hover{
         cursor: pointer;
+        img{
+            transition: ease-in-out 0.2s;
+            transform: scale(1.25);
         }
+        
+        
+    }
 }
+
+
 
 .showmore-button {
     font-size: 16px;
@@ -55,6 +64,8 @@ body{
             position: absolute;
             top: 0;
             left: -33px;
+
+            
     
         }
 
@@ -67,9 +78,15 @@ body{
             }
 
         }
+        
+        &:hover {
+            background: linear-gradient(to bottom right, #CCFBFF, #EF96C5);    
+        }
     }
 
+
 }
+
 
 //=== COMMON ===
 

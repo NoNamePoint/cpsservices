@@ -8,6 +8,12 @@
 
     }
 
+    &__item{
+        &:hover{
+            color:$linkcolor;
+        }
+    }
+
     &__item--active {
         color: $linkcolor;
     }

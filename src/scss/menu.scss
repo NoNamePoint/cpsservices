@@ -53,6 +53,12 @@
         display: flex;
     }
 
+    &__link {
+        &:hover {
+            color: $linkcolor;    
+        }
+    }
+
     &__link--active {
         color: $linkcolor;
         position: relative;
@@ -85,91 +91,5 @@
 
 }
 
-
-
-          
-
-//        .aside-wrapper{
-//             
-        
-//             .nav__menu{
-//                 
-
-//                 li{
-//                     margin-bottom: 24px;
-
-//                     &:last-of-type{
-//                         margin-bottom: 32px;
-//                     }
-
-
-//                     a:hover{
-//                                 color: #7E7E82;
-//                     }
-
-//                     &:first-of-type{
-//                         position: relative;
-                        
-//                         a{
-//                             color: #7E7E82;   
-//                         }
-
-//                         &::before{
-
-//                             content: "";
-//                             position: absolute;
-//                             top: -5px;
-//                             left: -24px;
-//                             width: 4px;
-//                             height: 32px;
-//                             background: #41F6D7;
-//                             border-top-right-radius: 5px;
-//                             border-bottom-right-radius: 5px;
-//                         }    
-//                     }       
-//                 }
-//             }
-
-//             .nav__socials{
-//                 width: 196px;
-//                 height: 124px;
-//                 display: flex;
-//                 flex-wrap: wrap;
-//                 justify-content: space-between;
-//                 align-items: center;
-                
-
-//                 .socials__buttons-link:last-of-type{
-//                     margin-right: 44px;
-//                 }
-
-//                 .socials__footer-tel{
-//                     font-size: 24px;
-//                     line-height: 32px;
-//                     font-weight: 600;
-//                     letter-spacing: -0.6px;
-//                 }
-                
-//             }
-//             .nav__languages{
-//                 margin-top: 8px;
-//                 display: flex;
-//                 justify-content: space-between;
-//                 .languages__item-link:hover{
-//                     color: #7E7E82;
-//                 }
-
-//                 .languages__item-link:first-of-type{
-//                     color:#7E7E82;
-//                 }
-
-//                 .languages__item-link:last-of-type{
-//                     margin-right: 209px;
-//                 }
-//             }
-//         }
-//     }
-// }   
-    
 
 // ===NAV-MENU===

@@ -21,9 +21,9 @@ let showMoreButtonLink = document.querySelector('.showmore-button__link');
 
 
 function showMoreLess() { 
-    let maxheight = getElementStyle("max-height", contentBrands)
+    let contentBrandsHeight = getElementStyle("max-height", contentBrands)
 
-    if (maxheight != "none") {
+    if (contentBrandsHeight != "none") {
         contentBrands.style.maxHeight = "none";
         showMoreButtonLink.innerHTML = "Скрыть";
         

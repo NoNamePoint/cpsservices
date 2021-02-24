@@ -9,6 +9,10 @@
         font-size: 16px;
         line-height: 24px;
         font-weight: 500;
+
+        &:hover{
+            color: rgb(0, 17, 255);
+        }
     }
 
     &__phone {
@@ -16,5 +20,9 @@
         line-height: 32px;
         font-weight: 600;  
         margin-top: 12px;
+
+        &:hover{
+            color: rgb(0, 17, 255);
+        }
     }
 }

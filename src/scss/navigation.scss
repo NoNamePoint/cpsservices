@@ -32,6 +32,11 @@
             border-radius: 6px;
             background-color: #fff;
         }
+
+        &:hover{
+            border: 2px solid $bordercolor;
+            border-radius: 6px;
+        }
     }
     &__link{
         white-space: nowrap;
