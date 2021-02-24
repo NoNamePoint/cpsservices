@@ -8,49 +8,53 @@
 <link href="style.css" rel="stylesheet"></head>
 <body>
     <div class="blur"></div>
-    <menu class="menu menu--active">
-        <nav class="menu__inner">
-            <div class="functional-btns">
-                <button class="functional-btns__button functional-btns__button--close common-button">
-                    <span class="functional-btns__line"></span>
-                    <span class="functional-btns__line"></span>
-                    <span class="functional-btns__line"></span>
-                    <span class="functional-btns__line"></span>
-                </button>
-                <a href="#" class="functional-btns__logo">
-                    <img src="./img/logo.svg" alt="Логотип компании" class="functional-btns__logo-img">
-                </a>
-                <button href="#" class="functional-btns__search common-button">
-                    <img src="./img/icon-bigsearch.png" alt="поиск">
-                </button>
-            </div>
-            <ul class="menu__list">
-                <li class="menu__item menu__item--active">
-                    <a href="#" class="menu__link menu__link--active">Ремонт техники</a>
-                </li>
-                <li class="menu__item">
-                    <a href="#" class="menu__link">Услуги и сервисы</a>
-                </li>
-                <li class="menu__item">
-                    <a href="#" class="menu__link">Корпоративным клиентам</a>
-                </li>
-                <li class="menu__item">
-                    <a href="#" class="menu__link">Продавцам техники</a>
-                </li>
-                <li class="menu__item">
-                    <a href="#" class="menu__link">Партнерам</a>
-                </li>
-                <li class="menu__item">
-                    <a href="#" class="menu__link">Производителям</a>
-                </li>
-                <li class="menu__item">
-                    <a href="#" class="menu__link">Наши сервисные центры</a>
-                </li>
-                <li class="menu__item">
-                    <a href="#" class="menu__link">Контакты</a>
-                </li>
-            </ul>
-            <div class="menu__media">
+    <aside class="menu menu--active">
+        <div class="menu__inner">
+            <header class="menu__header">
+                <div class="functional-btns">
+                    <button class="functional-btns__button functional-btns__button--close common-button">
+                        <span class="functional-btns__line"></span>
+                        <span class="functional-btns__line"></span>
+                        <span class="functional-btns__line"></span>
+                        <span class="functional-btns__line"></span>
+                    </button>
+                    <a href="#" class="functional-btns__logo">
+                        <img src="./img/logo.svg" alt="Логотип компании" class="functional-btns__logo-img">
+                    </a>
+                    <button class="functional-btns__search common-button">
+                        <img src="./img/icon-bigsearch.png" alt="поиск">
+                    </button>
+                </div>
+            </header>
+            <nav class="menu__nav">
+                <ul class="menu__list">
+                    <li class="menu__item menu__item--active">
+                        <a href="#" class="menu__link menu__link--active">Ремонт техники</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Услуги и сервисы</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Корпоративным клиентам</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Продавцам техники</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Партнерам</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Производителям</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Наши сервисные центры</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <footer class="menu__footer menu__media">
                 <div class="socials socials--bottom">
                     <button href="#" class="socials__btn common-button">
                         <img src="./img/icon-phone.svg" alt="телефон" class="header__link-img img_phone">
@@ -71,9 +75,9 @@
                     <a href="#" class="languages__item">EN</a>
                     <a href="#" class="languages__item">CH</a>
                 </div>
-            </div>
-        </nav>
-    </menu>
+            </footer>
+        </div>
+    </aside>
    
 <script type="text/javascript" src="./js/bundle.js"></script></body>
 </html>

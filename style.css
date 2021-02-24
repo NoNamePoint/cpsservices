@@ -189,6 +189,8 @@ button {
     flex-direction: column; }
   .menu .socials--bottom {
     display: flex; }
+  .menu__link:hover {
+    color: #7E7E82; }
   .menu__link--active {
     color: #7E7E82;
     position: relative; }
@@ -322,6 +324,9 @@ button {
       border: 2px solid #B8FFEC;
       border-radius: 6px;
       background-color: #fff; }
+    .navigation__item:hover {
+      border: 2px solid #B8FFEC;
+      border-radius: 6px; }
   .navigation__link {
     white-space: nowrap;
     font-size: 16px;
@@ -395,11 +400,15 @@ button {
     font-size: 16px;
     line-height: 24px;
     font-weight: 500; }
+    .contacts__mail:hover {
+      color: #0011ff; }
   .contacts__phone {
     font-size: 24px;
     line-height: 32px;
     font-weight: 600;
     margin-top: 12px; }
+    .contacts__phone:hover {
+      color: #0011ff; }
 
 .languages {
   margin-top: 8px;
@@ -407,6 +416,8 @@ button {
   font-weight: 500; }
   .languages__item:not(:last-of-type) {
     margin-right: 7px; }
+  .languages__item:hover {
+    color: #7E7E82; }
   .languages__item--active {
     color: #7E7E82; }
 
@@ -445,6 +456,8 @@ button {
     background: #fff;
     cursor: pointer;
     border-radius: 6px; }
+    .brands__link:hover {
+      background: linear-gradient(to bottom right, #CCFBFF, #EF96C5); }
   .brands__btn {
     width: 36px !important;
     height: 36px !important;
@@ -501,6 +514,9 @@ body {
   align-items: center; }
   .common-button:hover, .brands__btn:hover {
     cursor: pointer; }
+    .common-button:hover img, .brands__btn:hover img {
+      transition: ease-in-out 0.2s;
+      transform: scale(1.25); }
 
 .showmore-button {
   font-size: 16px;
@@ -518,6 +534,8 @@ body {
       transform-origin: center;
       transform: rotate(180deg);
       top: -8px; }
+    .showmore-button__link:hover {
+      background: linear-gradient(to bottom right, #CCFBFF, #EF96C5); }
 
 
 /*# sourceMappingURL=style.css.map*/
