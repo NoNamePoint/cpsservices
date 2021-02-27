@@ -28,7 +28,8 @@ button {
   padding: 0; }
 
 button {
-  border: none; }
+  border: none;
+  cursor: pointer; }
 
 .page {
   display: flex;
@@ -463,6 +464,10 @@ button {
     height: 36px !important;
     background-color: transparent !important;
     border: 2px solid #FF3E79; }
+  .brands .swiper-pagination {
+    position: static;
+    margin-top: 16px;
+    margin-bottom: 24px; }
 
 .swiper-pagination-bullet {
   background-color: #DDDDDD;
@@ -487,7 +492,8 @@ button {
       max-height: 72px; }
     .brands__button {
       display: block;
-      padding: 10px 32px; }
+      padding: 10px 32px;
+      margin-bottom: 22px; }
       .brands__button--less {
         padding: 46px 32px; } }
 
@@ -500,11 +506,225 @@ button {
     .brands__list {
       gap: 16px 32px; } }
 
+.goods {
+  min-height: 110px;
+  padding: 0 16px;
+  width: 100%; }
+  .goods::before {
+    content: "";
+    width: 24px;
+    height: 160px;
+    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10; }
+  .goods__item {
+    max-width: 240px;
+    min-height: 160px;
+    box-sizing: border-box; }
+  .goods__button {
+    display: none; }
+  .goods__title {
+    align-self: flex-start;
+    font-weight: 500; }
+  .goods__link {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-radius: 6px;
+    border: 1px solid #EAEAEA;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 6px;
+    max-width: 240px;
+    min-height: 160px; }
+    .goods__link:hover {
+      background: linear-gradient(to bottom right, #CCFBFF, #EF96C5); }
+  .goods__btn {
+    width: 36px !important;
+    height: 36px !important;
+    background-color: transparent !important;
+    border: 2px solid #FF3E79;
+    align-self: flex-end; }
+  .goods .swiper-pagination {
+    position: static;
+    margin-top: 16px;
+    margin-bottom: 24px; }
+
+.swiper-pagination-bullet {
+  background-color: #DDDDDD;
+  width: 12px;
+  height: 12px;
+  margin: 0 12px;
+  opacity: .9; }
+  .swiper-pagination-bullet-active {
+    background-color: #B5B6BC; }
+
+@media screen and (min-width: 767px) {
+  .goods {
+    padding: 0 24px; }
+    .goods::before {
+      display: none; }
+    .goods__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px 24px; }
+    .goods__item {
+      max-width: 224px; }
+      .goods__item:nth-child(4), .goods__item:nth-child(5), .goods__item:nth-child(6), .goods__item:nth-child(7), .goods__item:nth-child(8), .goods__item:nth-child(9) {
+        display: none; }
+    .goods__button {
+      display: block;
+      padding: 10px 32px;
+      margin-bottom: 22px; }
+      .goods__button--less {
+        padding: 46px 32px; } }
+
+@media screen and (min-width: 1120px) {
+  .goods {
+    padding: 0 32px; }
+    .goods__item {
+      max-width: 240px; }
+      .goods__item:nth-child(4) {
+        display: block; }
+    .goods__list {
+      gap: 16px 32px; } }
+
+.price {
+  min-height: 110px;
+  padding: 0 16px;
+  width: 100%; }
+  .price::before {
+    content: "";
+    width: 24px;
+    height: 200px;
+    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10; }
+  .price__line {
+    display: none; }
+  .price__table-header {
+    display: none; }
+  .price__row {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px; }
+    .price__row:not(:last-of-type) {
+      margin-bottom: 16px; }
+  .price__item {
+    max-width: 260px;
+    min-height: 200px;
+    box-sizing: border-box; }
+  .price__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; }
+  .price__title {
+    line-height: 16px;
+    font-weight: 500;
+    color: #7E7E82;
+    margin-bottom: 4px; }
+  .price__description {
+    line-height: 18px; }
+  .price__link {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    padding: 16px;
+    border-radius: 6px;
+    border: 1px solid #EAEAEA;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 6px; }
+    .price__link:hover {
+      background: linear-gradient(to bottom right, #CCFBFF, #EF96C5); }
+  .price__btn {
+    padding: 4px 15px;
+    background-color: #FF3E79;
+    color: #fff;
+    font-size: 12px;
+    line-height: 24px;
+    text-transform: uppercase;
+    border-radius: 16px;
+    font-weight: 600; }
+    .price__btn img {
+      margin-left: 17px; }
+  .price .swiper-pagination {
+    position: static;
+    margin-top: 16px;
+    margin-bottom: 24px; }
+
+.swiper-pagination-bullet {
+  background-color: #DDDDDD;
+  width: 12px;
+  height: 12px;
+  margin: 0 12px;
+  opacity: .9; }
+  .swiper-pagination-bullet-active {
+    background-color: #B5B6BC; }
+
+@media screen and (min-width: 767px) {
+  .price {
+    padding: 42px 24px;
+    position: relative; }
+    .price::before {
+      display: none; }
+    .price__line {
+      display: block;
+      background: #EAEAEA;
+      height: 1px;
+      width: 686px;
+      position: absolute;
+      left: 16px; }
+    .price__list {
+      display: table; }
+    .price__item {
+      min-width: 720px;
+      display: table-row; }
+    .price__link {
+      padding: 0;
+      display: table-row; }
+    .price__row {
+      display: table-cell; }
+    .price__title {
+      display: none; }
+      .price__title--head {
+        display: table-header-group;
+        position: absolute;
+        top: -31px; }
+    .price__description {
+      display: table-cell;
+      padding: 23px 0;
+      width: 720px;
+      margin-left: 16px;
+      padding-left: 16px; }
+      .price__description--text {
+        max-width: 355px; }
+      .price__description--cost {
+        max-width: 113px; }
+      .price__description--time {
+        max-width: 100px; }
+    .price__bottom {
+      display: table-row; }
+    .price__btn {
+      padding: 4px 12px;
+      margin-right: 16px;
+      margin-left: 20px; } }
+
+@media screen and (min-width: 1120px) {
+  .price__list {
+    gap: 16px 32px; } }
+
 body {
   font-family: "TT Lakes", sans-serif;
   background-color: #F2F2F2; }
 
-.common-button, .brands__btn {
+.common-button, .brands__btn, .goods__btn {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -512,9 +732,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center; }
-  .common-button:hover, .brands__btn:hover {
+  .common-button:hover, .brands__btn:hover, .goods__btn:hover {
     cursor: pointer; }
-    .common-button:hover img, .brands__btn:hover img {
+    .common-button:hover img, .brands__btn:hover img, .goods__btn:hover img {
       transition: ease-in-out 0.2s;
       transform: scale(1.25); }
 
