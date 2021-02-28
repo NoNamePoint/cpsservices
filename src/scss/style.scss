@@ -16,6 +16,7 @@
 @import "brands";
 @import "goods";
 @import "price";
+@import "footer";
 
 // @import "media-768";
 // @import "media-1120";
@@ -66,21 +67,8 @@ body{
             position: absolute;
             top: 0;
             left: -33px;
-
-            
-    
         }
-
-        &--showless {
-
-            &::before{
-                transform-origin: center;
-                transform: rotate(180deg);
-                top: -8px;
-            }
-
-        }
-        
+   
         &:hover {
             background: linear-gradient(to bottom right, #CCFBFF, #EF96C5);    
         }

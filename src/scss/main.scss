@@ -13,9 +13,9 @@
             flex-direction: column;
         }
 
-        &__inner--secondary {
-            padding: 0;
-        }
+        // &__inner--secondary {
+        //     padding: 0;
+        // }
 
     }
 }
@@ -23,15 +23,11 @@
 
 @media screen and (min-width: 1120px) {
     .main {
-
+        display: flex;
         .services{
 
             &__inner{
                 padding-top: 42px;
-            }
-
-            &__inner--secondary {
-            padding: 0;
             }
 
         }

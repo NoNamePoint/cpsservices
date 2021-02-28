@@ -1,12 +1,13 @@
 // ===NAV-MENU===
 .menu {
     min-width: 320px;
-    height: 100%;
+    height: 5000px;
     position: absolute;
     display: none;
     background-color: #fff;
     z-index: 1000;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+    top: 0;
     
 
     &--active{
@@ -17,7 +18,7 @@
     
     &__inner {
         width: 100%;
-        height: 100vh;
+        height: 100%;
         padding: 18px 24px 32px;
         padding-bottom: 24px;
         overflow: scroll;
@@ -79,8 +80,9 @@
 
 @media screen and (min-width: 768px){
     .menu {
+        height: 1820px;
         box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);    
-
+        
 
         &__media{
             margin-top: 279px;
@@ -91,5 +93,24 @@
 
 }
 
+
+@media screen and (min-width: 1120px){
+    .menu {
+        height: 1880px;
+        display: block;
+        box-shadow: none;
+        max-width: 320px;
+        position: initial;
+        &__inner{
+            padding-top: 32px;
+            overflow: visible;
+        }
+
+        // &__media{
+        //     margin-top: 100px;
+        // }
+    }
+
+}
 
 // ===NAV-MENU===

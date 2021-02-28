@@ -33,6 +33,7 @@
         &:not(:last-of-type){
             margin-bottom: 16px;
         }
+
     }
 
     &__item {
@@ -65,8 +66,10 @@
         display: flex;
         position: relative;
         flex-direction: column;
+        justify-content: space-between;
         padding: 16px;
         border-radius: 6px;
+        min-height: 200px;
         border: 1px solid $content;
         background: #fff;
         cursor: pointer;
@@ -95,6 +98,23 @@
 
     }
 
+    &__condition{
+        max-width: 420px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    &__button{
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 500;
+        margin-top: 16px;
+    }
+
+    &__pink-arrow{
+        margin-left: 5px;
+    }
+
     .swiper-pagination {
         position: static;
         margin-top: 16px;
@@ -102,9 +122,6 @@
     
     }
 }
-
-
-
 
 .swiper-pagination-bullet {
     background-color: #DDDDDD;
@@ -160,14 +177,24 @@
         
         &__title {   
             display: none;    
-            &--head{
+            &--services,
+            &--cost,
+            &--time{
                 display: table-header-group;
                 position: absolute;
-                top: -31px;
-                
-
-                
+                top: -31px;      
             }
+
+            &--services{
+                left:16px;
+            }
+            &--cost{
+                left:370px;
+            }
+            &--time{
+                right:200px;
+            }
+
         }
 
         
@@ -216,11 +243,55 @@
 
 @media screen and (min-width: 1120px) {
     .price {
-        // padding: 0 32px;
-
+        padding: 42px 32px;
 
         &__list {
             gap: 16px 32px;
+        }
+
+        &__title {   
+
+            &--services{
+                left: 24px;
+            }
+            &--cost{
+                left: 510px;
+            }
+            &--time{
+                right: 278px;
+            }
+
+        }
+
+        &__line{
+            width: 1031px;
+
+        }
+
+
+        &__description {
+
+            padding-left: 24px;
+            
+            &--text {
+                max-width: 490px;
+                
+                
+            }
+
+            &--cost{
+                max-width: 238px;
+                
+            }
+
+            &--time {
+                max-width: 176px;
+            }
+
+        }
+
+        &__btn {
+            margin-right: 24px;
         }
 
     }

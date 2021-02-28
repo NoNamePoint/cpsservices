@@ -1,0 +1,51 @@
+.footer{
+    width: 100%;
+    border-top: 1px solid $bordercolor;
+    margin-top: 40px;
+    padding: 16px;
+    background: inherit;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    color: $linkcolor;
+
+    &__info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    &__item{
+        text-align: center;
+        
+        
+        &:not(:last-of-type){
+            margin-bottom: 16px;
+        }
+    }
+    
+}
+
+@media screen and (min-width: 767px) {
+    .footer{
+
+        &__info {
+            justify-content: space-between;
+            flex-wrap: nowrap;
+        }
+
+        &__item{
+            width: 33%;
+            &:first-child{
+                text-align: left;
+            }
+            &:last-child{
+                text-align: right;
+            }
+        }
+
+    }
+
+}

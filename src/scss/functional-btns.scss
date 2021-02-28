@@ -8,6 +8,11 @@
        
     }
 
+    &__menu {
+        position: relative;
+       
+    }
+
 
     &__line {
         width: 18px;
@@ -57,7 +62,7 @@
         }
     }
 
-    &__button--close span {
+    &__menu--close span {
         
         &:first-child,
         &:last-child {
@@ -95,4 +100,22 @@
             }
         }
     }    
+}
+
+
+
+@media screen and (min-width: 1120px){
+    .menu .functional-btns {
+        &__menu{
+            display: none;
+        }
+
+        &__logo{
+            margin-left: 0;
+        }
+
+
+    }
+
+
 }
