@@ -29,7 +29,8 @@ button {
 
 button {
   border: none;
-  cursor: pointer; }
+  cursor: pointer;
+  position: relative; }
 
 .page {
   display: flex;
@@ -39,8 +40,7 @@ button {
   margin: 0 auto;
   font-family: "TT Lakes", sans-serif;
   overflow: auto;
-  background-color: #F8F8F8;
-  padding-bottom: 60px; }
+  background-color: #F8F8F8; }
 
 .container {
   max-width: 1120px;
@@ -49,10 +49,20 @@ button {
 
 .blur {
   width: 100%;
-  height: 100%;
+  height: 1820px;
   background: rgba(255, 255, 255, 0.96);
   mix-blend-mode: normal;
-  position: absolute; }
+  position: absolute;
+  display: none;
+  z-index: 100; }
+  .blur--active {
+    display: block; }
+
+@media screen and (min-width: 1120px) {
+  .blur {
+    display: none; }
+  .page {
+    max-width: 1440px; } }
 
 @font-face {
   font-family: 'TT Lakes';
@@ -96,6 +106,8 @@ button {
   align-items: center; }
   .functional-btns__button {
     position: relative; }
+  .functional-btns__menu {
+    position: relative; }
   .functional-btns__line {
     width: 18px;
     height: 2px;
@@ -124,14 +136,14 @@ button {
     position: absolute;
     top: 12px;
     left: 100%; }
-  .functional-btns__button--close span:first-child, .functional-btns__button--close span:last-child {
+  .functional-btns__menu--close span:first-child, .functional-btns__menu--close span:last-child {
     display: none; }
-  .functional-btns__button--close span:nth-child(2), .functional-btns__button--close span:nth-child(3) {
+  .functional-btns__menu--close span:nth-child(2), .functional-btns__menu--close span:nth-child(3) {
     width: 18px;
     transition: 0.2s; }
-  .functional-btns__button--close span:nth-child(2) {
+  .functional-btns__menu--close span:nth-child(2) {
     transform: rotate(45deg); }
-  .functional-btns__button--close span:nth-child(3) {
+  .functional-btns__menu--close span:nth-child(3) {
     transform: rotate(-45deg); }
 
 @media screen and (min-width: 768px) {
@@ -141,6 +153,12 @@ button {
       left: 0px;
       margin-left: 0; } }
 
+@media screen and (min-width: 1120px) {
+  .menu .functional-btns__menu {
+    display: none; }
+  .menu .functional-btns__logo {
+    margin-left: 0; } }
+
 .main {
   width: 100%; }
   .main .services__inner {
@@ -148,28 +166,27 @@ button {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column; }
-  .main .services__inner--secondary {
-    padding: 0; }
 
 @media screen and (min-width: 1120px) {
-  .main .services__inner {
-    padding-top: 42px; }
-  .main .services__inner--secondary {
-    padding: 0; } }
+  .main {
+    display: flex; }
+    .main .services__inner {
+      padding-top: 42px; } }
 
 .menu {
   min-width: 320px;
-  height: 100%;
+  height: 5000px;
   position: absolute;
   display: none;
   background-color: #fff;
   z-index: 1000;
-  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s; }
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+  top: 0; }
   .menu--active {
     display: block; }
   .menu__inner {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     padding: 18px 24px 32px;
     padding-bottom: 24px;
     overflow: scroll;
@@ -208,9 +225,21 @@ button {
 
 @media screen and (min-width: 768px) {
   .menu {
+    height: 1820px;
     box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2); }
     .menu__media {
       margin-top: 279px; } }
+
+@media screen and (min-width: 1120px) {
+  .menu {
+    height: 1880px;
+    display: block;
+    box-shadow: none;
+    max-width: 320px;
+    position: initial; }
+    .menu__inner {
+      padding-top: 32px;
+      overflow: visible; } }
 
 .socials {
   display: none;
@@ -314,7 +343,7 @@ button {
       position: absolute;
       width: 24px;
       height: 35px;
-      top: 174px;
+      top: 152px;
       right: 0;
       background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%); }
   .navigation__item {
@@ -349,7 +378,8 @@ button {
   .about-company__inner {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    margin-bottom: 24px; }
   .about-company__description {
     padding: 0 16px;
     margin-bottom: 16px; }
@@ -494,8 +524,12 @@ button {
       display: block;
       padding: 10px 32px;
       margin-bottom: 22px; }
+      .brands__button-link--showless::before {
+        transform-origin: center;
+        transform: rotate(180deg);
+        top: -8px !important; }
       .brands__button--less {
-        padding: 46px 32px; } }
+        padding: 0px 32px; } }
 
 @media screen and (min-width: 1120px) {
   .brands {
@@ -635,8 +669,10 @@ button {
     display: flex;
     position: relative;
     flex-direction: column;
+    justify-content: space-between;
     padding: 16px;
     border-radius: 6px;
+    min-height: 200px;
     border: 1px solid #EAEAEA;
     background: #fff;
     cursor: pointer;
@@ -654,6 +690,17 @@ button {
     font-weight: 600; }
     .price__btn img {
       margin-left: 17px; }
+  .price__condition {
+    max-width: 420px;
+    font-size: 14px;
+    line-height: 20px; }
+  .price__button {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    margin-top: 16px; }
+  .price__pink-arrow {
+    margin-left: 5px; }
   .price .swiper-pagination {
     position: static;
     margin-top: 16px;
@@ -693,10 +740,16 @@ button {
       display: table-cell; }
     .price__title {
       display: none; }
-      .price__title--head {
+      .price__title--services, .price__title--cost, .price__title--time {
         display: table-header-group;
         position: absolute;
         top: -31px; }
+      .price__title--services {
+        left: 16px; }
+      .price__title--cost {
+        left: 370px; }
+      .price__title--time {
+        right: 200px; }
     .price__description {
       display: table-cell;
       padding: 23px 0;
@@ -717,8 +770,59 @@ button {
       margin-left: 20px; } }
 
 @media screen and (min-width: 1120px) {
-  .price__list {
-    gap: 16px 32px; } }
+  .price {
+    padding: 42px 32px; }
+    .price__list {
+      gap: 16px 32px; }
+    .price__title--services {
+      left: 24px; }
+    .price__title--cost {
+      left: 510px; }
+    .price__title--time {
+      right: 278px; }
+    .price__line {
+      width: 1031px; }
+    .price__description {
+      padding-left: 24px; }
+      .price__description--text {
+        max-width: 490px; }
+      .price__description--cost {
+        max-width: 238px; }
+      .price__description--time {
+        max-width: 176px; }
+    .price__btn {
+      margin-right: 24px; } }
+
+.footer {
+  width: 100%;
+  border-top: 1px solid #B8FFEC;
+  margin-top: 40px;
+  padding: 16px;
+  background: inherit;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  color: #7E7E82; }
+  .footer__info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; }
+  .footer__item {
+    text-align: center; }
+    .footer__item:not(:last-of-type) {
+      margin-bottom: 16px; }
+
+@media screen and (min-width: 767px) {
+  .footer__info {
+    justify-content: space-between;
+    flex-wrap: nowrap; }
+  .footer__item {
+    width: 33%; }
+    .footer__item:first-child {
+      text-align: left; }
+    .footer__item:last-child {
+      text-align: right; } }
 
 body {
   font-family: "TT Lakes", sans-serif;
@@ -750,10 +854,6 @@ body {
       position: absolute;
       top: 0;
       left: -33px; }
-    .showmore-button__link--showless::before {
-      transform-origin: center;
-      transform: rotate(180deg);
-      top: -8px; }
     .showmore-button__link:hover {
       background: linear-gradient(to bottom right, #CCFBFF, #EF96C5); }
 
