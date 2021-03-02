@@ -14,7 +14,57 @@
 <body>
     <div class="blur"></div>
     
-    <div class="page">
+    <div class="page">     
+         
+        <div class="modal-call">
+            <button class="modal-call__close">
+        
+            </button>
+            <div class="container">
+                <form action="" method="get" class="modal-call__form">
+                    <h1 class="modal-call__title">Заказать звонок</h1>
+                    <input type="text" class="modal-call__input" placeholder="Телефон">
+                    <p class="modal-call__text">
+                        Нажимая “отправить”, вы даете согласие на <a href="#" class="modal-call__link">обработку персональных
+                            данных</a> и соглашаетесь с нашей
+                        <a href="#" class="modal-call__link">политикой конфиденциальности</a>
+                    </p>
+                    <div class="modal-call__wrapper">
+                        <button class="modal-call__btn">отправить
+                            <a href="#" class="price-button__link">
+                                <img src="./img/dropdown-white.svg" alt="показать информацию" class="modal-call__arrow">
+                            </a>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="modal-call modal-feed">
+            <button class="modal-call__close"></button>
+        
+            <div class="container">
+                <form action="" method="get" class="modal-call__form">
+                    <h1 class="modal-call__title">Обратная связь</h1>
+                    <input type="text" class="modal-call__input" placeholder="Имя">
+                    <input type="text" class="modal-call__input" placeholder="Телефон">
+                    <input type="text" class="modal-call__input" placeholder="Электронная почта">
+                    <textarea class="modal-call__input modal-call__input--height--118" placeholder="Сообщение"></textarea>
+                    <p class="modal-call__text">
+                        Нажимая “отправить”, вы даете согласие на <a href="#" class="modal-call__link">обработку персональных
+                            данных</a> и соглашаетесь с нашей
+                        <a href="#" class="modal-call__link">политикой конфиденциальности</a>
+                    </p>
+                    <div class="modal-call__wrapper">
+                        <button class="modal-call__btn">отправить
+                            <a href="#" class="modal-call__lnk">
+                                <img src="./img/dropdown-white.svg" alt="показать информацию" class="modal-call__arrow">
+                            </a>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
         
         <header class="header">
             <div class="header__inner container">
@@ -105,13 +155,14 @@
                     </nav>
                     <footer class="menu__footer menu__media">
                         <div class="socials socials--bottom">
-                            <button href="#" class="socials__btn common-button">
+                            
+                            <button href="#" class="socials__btn socials__btn-call common-button">
                                 <img src="./img/icon-phone.svg" alt="телефон" class="header__link-img img_phone">
                             </button>
-                            <button href="#" class="socials__btn common-button">
+                            <button href="#" class="socials__btn socials__btn-feedback common-button">
                                 <img src="./img/icon-message.svg" alt="заявка" class="header__link-img img_message">
                             </button>
-                            <button href="#" class="socials__btn common-button">
+                            <button href="#" class="socials__btn socials__btn-login common-button">
                                 <img src="./img/icon-man.svg" alt="профайл" class="header__link-img img_man">
                             </button>
                         </div>
@@ -387,7 +438,7 @@
                     
                     
                     <div class="goods__button showmore-button">
-                        <a href="#" class="showmore-button__link">Показать все</a>
+                        <a href="#" class="goods__button-link showmore-button__link">Показать все</a>
                     </div>
                     
                     <div class="title title--secondary">цены на услуги</div>
