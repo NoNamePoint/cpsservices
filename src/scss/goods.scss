@@ -88,6 +88,7 @@
 
 @media screen and (min-width: 767px) {
     .goods {
+        max-height: 160px;
         padding: 0 24px;
 
         &::before {
@@ -102,15 +103,6 @@
 
         &__item{
             max-width: 224px;
-
-            &:nth-child(4),
-            &:nth-child(5),
-            &:nth-child(6),
-            &:nth-child(7),
-            &:nth-child(8),
-            &:nth-child(9){
-                display: none;
-            }
              
         }
 
@@ -120,6 +112,19 @@
             display: block;
             padding: 10px 32px;
             margin-bottom: 22px;
+
+            &-link{
+
+                &--showless {
+
+                    &::before{
+                        transform-origin: center;
+                        transform: rotate(180deg);
+                        top: -8px !important;
+                    }
+
+                }
+            }
 
             &--less{
                 padding: 46px 32px;
@@ -138,9 +143,6 @@
         &__item{
             max-width: 240px;
 
-            &:nth-child(4){
-                display: block;
-            }
              
         }
 

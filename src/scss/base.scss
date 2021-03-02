@@ -48,6 +48,7 @@ button{
   font-family: "TT Lakes", sans-serif;
   overflow: auto;
   background-color: #F8F8F8;
+  position: relative;
 
 
 }
@@ -65,7 +66,7 @@ button{
   mix-blend-mode: normal;
   position: absolute;
   display: none;
-  z-index: 100;
+  z-index: 3;
   &--active{
     display: block;
   }
@@ -75,8 +76,13 @@ button{
 @media screen and (min-width: 1120px) {
   .blur{
     display: none;
+    z-index: 20;
   }
 
+
+  .blur--active{
+    display: block;
+  }
   .page{
     max-width: 1440px;
   }
