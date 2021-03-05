@@ -12,6 +12,12 @@ if (window.innerWidth <= 767) {
     });
 };
 
+const page = document.getElementsByTagName('body')[0]
+
+const buttonAboutCompany = document.querySelector('.about-company__btn');
+const showMoreAboutLink = document.querySelector('.about-company__link');
+const textAboutCompany = document.getElementById("text2")
+const blockAboutCompany = document.querySelector('.about-company__text'); 
 
 
 const contentBrands = document.querySelector('.brands');
@@ -28,10 +34,35 @@ const menuClose = document.querySelector('.functional-btns__menu');
 const blur = document.querySelector('.blur');
 const menu = document.querySelector('.menu');
 
-// const socialBtnCall = document.querySelector('.socials__btn-call');
-// const socialBtnFeedback = document.querySelector('.socials__btn-feedback');
+
 const modalCall = document.querySelector('.modal-call');
 const modalFeedback = document.querySelector('.modal-feed');
+
+
+function showText(blockToShow, buttonlink, text) {
+    let maxheight = getElementStyle("max-height", blockToShow)
+    let minheight = getElementStyle("min-height", blockToShow)
+    
+    if(maxheight != 'none'){
+        blockToShow.style.minHeight = `${maxheight}`;
+        blockToShow.style.maxHeight = "none";
+        text.style.display = 'inline-block';
+        buttonlink.innerHTML = "Скрыть";
+    } else {
+        blockToShow.style.minHeight = maxheight;
+        blockToShow.style.maxHeight = minheight;
+        text.style.display = 'none';
+        buttonlink.innerHTML = "Читать далее";
+    }
+    
+
+    buttonlink.classList.toggle('about-company__link--showless')
+};
+
+buttonAboutCompany.addEventListener('click', (e) => {
+    e.preventDefault();
+    showText(blockAboutCompany, showMoreAboutLink, textAboutCompany);
+});
 
 
 
@@ -109,12 +140,14 @@ document.addEventListener('click', (event)=>{
         modalCall.classList.add('modal-call--active')
         blur.classList.add('blur--active')
         menu.classList.remove('menu--active')
+        page.style.position = 'fixed'
     }
 
     if(event.target.parentNode.matches('.socials__btn-feedback')){
         modalFeedback.classList.add('modal-call--active')
         blur.classList.add('blur--active')
         menu.classList.remove('menu--active')
+        page.style.position = 'fixed'
     }
 
     if (event.target.matches('.modal-call__close') || event.target.matches('.blur')) {
@@ -122,13 +155,8 @@ document.addEventListener('click', (event)=>{
         modalFeedback.classList.remove('modal-call--active')
         blur.classList.remove('blur--active')
         menu.classList.remove('menu--active')
+        page.style.position = 'inherit'
     }
-
-    // if (event.target.matches('.modal-feed')) {
-    //     modalFeedback.classList.add('modal-call--active')
-    //     blur.classList.add('blur--active')
-    //     menu.style.display = 'none'
-    // }
 
 });
 

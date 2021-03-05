@@ -14,11 +14,37 @@
         
     }
 
+    
+
+    &__link{
+
+        &--showless {
+
+            &::before{
+                transform-origin: center;
+                transform: rotate(180deg);
+                top: -8px !important;
+            }
+
+        }
+    }
+    
+
     &__text {
         display: inline-block;
         max-width: 312px;
         max-height: 110px;
+        min-height: none;
         overflow: hidden;
+
+        &--more{
+            max-height: none;
+        }
+
+        span ~ #text2 {
+            margin-top: 10px;
+            display: none;
+        }
 
     }
 
@@ -28,6 +54,7 @@
     &__picture{
         max-width: 320px;
         height: auto;
+        max-height: 307px;
 
         img{
             width: 100%;
@@ -82,8 +109,7 @@
 
 
         &__picture{
-            max-width: 100%;
-            
+            max-width: 100%;            
             img{
                 border-radius: 10px;
             }
