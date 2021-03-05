@@ -116,6 +116,8 @@ buttonGoods.addEventListener('click', (e) => {
 function headerToggleClass() {
     menu.classList.toggle("menu--active");
     blur.classList.toggle("blur--active");
+    page.style.height = '100vh'
+    page.style.overflowY = 'hidden'
 };
 
 
@@ -128,6 +130,8 @@ menuClose.addEventListener('click', function () {
 
     menu.classList.remove("menu--active");
     blur.classList.remove("blur--active");
+    page.style.height = 'initial'
+    page.style.overflowY = 'auto'
      
 });
 
@@ -140,14 +144,16 @@ document.addEventListener('click', (event)=>{
         modalCall.classList.add('modal-call--active')
         blur.classList.add('blur--active')
         menu.classList.remove('menu--active')
-        page.style.position = 'fixed'
+        page.style.height = '100vh'
+        page.style.overflowY = 'hidden'
     }
 
     if(event.target.parentNode.matches('.socials__btn-feedback')){
         modalFeedback.classList.add('modal-call--active')
         blur.classList.add('blur--active')
         menu.classList.remove('menu--active')
-        page.style.position = 'fixed'
+        page.style.height = '100vh'
+        page.style.overflowY = 'hidden'
     }
 
     if (event.target.matches('.modal-call__close') || event.target.matches('.blur')) {
@@ -155,7 +161,8 @@ document.addEventListener('click', (event)=>{
         modalFeedback.classList.remove('modal-call--active')
         blur.classList.remove('blur--active')
         menu.classList.remove('menu--active')
-        page.style.position = 'inherit'
+        page.style.height = 'initial'
+        page.style.overflowY = 'auto'
     }
 
 });

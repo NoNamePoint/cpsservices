@@ -1,7 +1,7 @@
 // ===NAV-MENU===
 .menu {
     min-width: 320px;
-    height: 5000px;
+    height: 100vh;
     position: absolute;
     display: none;
     background-color: #fff;
@@ -81,7 +81,6 @@
 @media screen and (min-width: 768px){
     .menu {
         z-index: 15;
-        height: 1820px;
         box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);    
         
 
@@ -97,7 +96,7 @@
 
 @media screen and (min-width: 1120px){
     .menu {
-        height: 1880px;
+        height: 1870px;
         display: block;
         box-shadow: none;
         max-width: 320px;
@@ -107,9 +106,6 @@
             overflow: visible;
         }
 
-        // &__media{
-        //     margin-top: 100px;
-        // }
     }
 
 }
